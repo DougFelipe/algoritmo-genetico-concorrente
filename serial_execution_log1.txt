@@ -2,13 +2,13 @@
 
 Iniciando carregamento do dataset...
 Total de biomarcadores: 31600000
-Tempo de carregamento: 20,942 segundos
+Tempo de carregamento: 13,972 segundos
 
 Iniciando execução do algoritmo genético...
 
-Tempo de execução do algoritmo: 118,931 segundos
-Memória antes: 4445,70 MB
-Memória depois: 7659,70 MB
+Tempo de execução do algoritmo: 94,167 segundos
+Memória antes: 4447,40 MB
+Memória depois: 7665,36 MB
 Memória máxima disponível: 8152,00 MB
 
 ==== FIM DA EXECUÇÃO ====

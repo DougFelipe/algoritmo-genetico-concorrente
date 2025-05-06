@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         String caminhoArquivo = "data/biomarcadores_1gb.txt";
         int tamanhoPopulacao = 100;
-        String logPath = "serial_execution_log.txt";
+        String logPath = "serial_execution_log2.txt";
 
         try (PrintWriter log = new PrintWriter(new FileWriter(logPath))) {
             log.println("==== EXECUÇÃO SERIAL DO ALGORITMO GENÉTICO ====\n");
