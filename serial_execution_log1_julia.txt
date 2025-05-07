@@ -1,0 +1,13 @@
+==== EXECUÇÃO SERIAL DO ALGORITMO GENÉTICO ====
+
+Total de biomarcadores: 31600000
+Tempo de carregamento: 50.680 segundos
+
+Iniciando execução do algoritmo genético...
+
+Melhor fitness encontrado: 2189690820.93
+Tempo de execução do algoritmo: 132.988 segundos
+Memória antes: 32599.05 MB
+Memória depois: 32599.05 MB
+
+==== FIM DA EXECUÇÃO ====
