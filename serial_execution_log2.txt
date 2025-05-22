@@ -1,0 +1,14 @@
+==== EXECUÇÃO SERIAL DO ALGORITMO GENÉTICO ====
+
+Iniciando carregamento do dataset...
+Total de biomarcadores: 31600000
+Tempo de carregamento: 12,628 segundos
+
+Iniciando execução do algoritmo genético...
+
+Tempo de execução do algoritmo: 94,041 segundos
+Memória antes: 4447,19 MB
+Memória depois: 7667,19 MB
+Memória máxima disponível: 8152,00 MB
+
+==== FIM DA EXECUÇÃO ====

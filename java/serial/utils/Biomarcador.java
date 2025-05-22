@@ -5,9 +5,9 @@ public class Biomarcador {
     public double expressao;
     public int conservacao;
     public int similaridadeHumana;
-    public String localizacao;
-
-    public Biomarcador(String id, double expressao, int conservacao, int similaridadeHumana, String localizacao) {
+    public Localizacao localizacao;
+    
+    public Biomarcador(String id, double expressao, int conservacao, int similaridadeHumana, Localizacao localizacao) {
         this.id = id;
         this.expressao = expressao;
         this.conservacao = conservacao;

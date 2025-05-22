@@ -1,9 +1,13 @@
 import random
 import os
 
-# === Funções auxiliares ===
+# === Mapas fixos para enum como int ===
+# 0: MEMBRANA
+# 1: CITOSOL
+# 2: SECRECAO
+
 def gerar_localizacao():
-    return random.choice(["Membrana", "Citosol", "Secreção"])
+    return random.randint(0, 2)  # Inteiros fixos que correspondem à ordem do enum em Java
 
 def gerar_similaridade():
     # 70% de chance de ser < 30, 30% >= 30
@@ -11,10 +15,10 @@ def gerar_similaridade():
 
 # === Configurações ===
 output_path = "biomarcadores_1gb.txt"
-batch_size = 100_000  # Linhas por lote
-limite_bytes = 1_000_000_000  # 1 GB em bytes (~1.000.000 KB)
+batch_size = 100_000
+limite_bytes = 1_000_000_000  # 1 GB
 
-# === Escreve cabeçalho no arquivo ===
+# === Escreve cabeçalho atualizado ===
 with open(output_path, "w", encoding="utf-8") as f:
     f.write("BiomarcadorID;Expressao_Tumoral;Conservacao;Similaridade_Humana;Localizacao\n")
 
@@ -41,7 +45,6 @@ while True:
 
     print(f"{total_linhas} linhas geradas - Tamanho atual: {tamanho_atual / (1024**2):.2f} MB")
 
-    # Para ao atingir 1GB
     if tamanho_atual >= limite_bytes:
         print("Arquivo atingiu 1GB. Processo finalizado.")
         break

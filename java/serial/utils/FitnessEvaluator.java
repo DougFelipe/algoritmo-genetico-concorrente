@@ -14,12 +14,16 @@ public class FitnessEvaluator {
                 String[] partes = linha.split(";");
                 if (partes.length != 5) continue;
 
+                // Debug: mostrar localização antes de conversão
+                String rawLocalizacao = partes[4];
+                Localizacao loc = Localizacao.from(rawLocalizacao);
+
                 Biomarcador b = new Biomarcador(
                     partes[0],
                     Double.parseDouble(partes[1]),
                     Integer.parseInt(partes[2]),
                     Integer.parseInt(partes[3]),
-                    partes[4]
+                    loc
                 );
                 lista.add(b);
             }
@@ -30,15 +34,24 @@ public class FitnessEvaluator {
     }
 
     public static double avaliar(boolean[] cromossomo, List<Biomarcador> dados) {
+        System.out.println("=== Início da avaliação ===");
         double fitness = 0;
+
         for (int i = 0; i < cromossomo.length; i++) {
             if (cromossomo[i]) {
                 Biomarcador b = dados.get(i);
+
+                // Verificação de tipo (reforçada, embora desnecessária com enum)
+                if (!(b.localizacao instanceof Localizacao)) {
+                    System.out.println("Tipo inesperado para localização: " + b.localizacao);
+                }
+
                 fitness += b.expressao + b.conservacao;
                 if (b.similaridadeHumana > 30) {
                     fitness -= 50;
                 }
-                if (b.localizacao.equalsIgnoreCase("Membrana") || b.localizacao.equalsIgnoreCase("Secreção")) {
+
+                if (b.localizacao == Localizacao.MEMBRANA || b.localizacao == Localizacao.SECRECAO) {
                     fitness += 20;
                 }
             }
