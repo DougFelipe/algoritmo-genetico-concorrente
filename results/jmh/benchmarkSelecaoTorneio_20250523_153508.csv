@@ -1,0 +1,2 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99,9%)","Unit"
+"benchmarks.jmh.BenchmarkGA.benchmarkSelecaoTorneio","avgt",1,5,"717,752407","26,208494","ms/op"

@@ -1,0 +1,2 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99,9%)","Unit"
+"benchmarks.jmh.BenchmarkGA.executarAlgoritmoCompleto","avgt",1,5,"1963429,874540","32524,676491","ms/op"
