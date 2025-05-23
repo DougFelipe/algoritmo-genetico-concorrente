@@ -49,6 +49,5 @@ public class GeneticAlgorithm {
             }
         }
 
-        System.out.printf("Melhor fitness encontrado: %.2f\n", melhorFitness);
     }
 }

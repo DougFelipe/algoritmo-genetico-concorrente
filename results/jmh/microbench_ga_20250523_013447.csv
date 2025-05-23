@@ -1,0 +1,10 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99,9%)","Unit","Param: tamanhoPopulacao"
+"benchmarks.jmh.BenchmarkGA.benchmarkAvaliar","avgt",1,5,"283,771540","25,668258","ms/op",10
+"benchmarks.jmh.BenchmarkGA.benchmarkAvaliar","avgt",1,5,"297,907733","65,875771","ms/op",20
+"benchmarks.jmh.BenchmarkGA.benchmarkAvaliar","avgt",1,5,"302,432110","20,024836","ms/op",50
+"benchmarks.jmh.BenchmarkGA.benchmarkGerarPopulacao","avgt",1,5,"4650,239640","1084,630299","ms/op",10
+"benchmarks.jmh.BenchmarkGA.benchmarkGerarPopulacao","avgt",1,5,"9986,960860","5054,716932","ms/op",20
+"benchmarks.jmh.BenchmarkGA.benchmarkGerarPopulacao","avgt",1,5,"25078,917500","5283,511394","ms/op",50
+"benchmarks.jmh.BenchmarkGA.executarAlgoritmoCompleto","avgt",1,5,"4126,489040","1403,543075","ms/op",10
+"benchmarks.jmh.BenchmarkGA.executarAlgoritmoCompleto","avgt",1,5,"7897,215470","304,206595","ms/op",20
+"benchmarks.jmh.BenchmarkGA.executarAlgoritmoCompleto","avgt",1,5,"23378,720800","11761,303482","ms/op",50

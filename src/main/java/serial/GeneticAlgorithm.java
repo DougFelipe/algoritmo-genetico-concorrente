@@ -19,6 +19,10 @@ public class GeneticAlgorithm {
         this.populacao = gerarPopulacao();
     }
 
+    public List<BitSet> gerarPopulacaoExterno() {
+    return gerarPopulacao();
+    }
+
     private List<BitSet> gerarPopulacao() {
         List<BitSet> lista = new ArrayList<>();
         Random rand = new Random();
@@ -49,6 +53,5 @@ public class GeneticAlgorithm {
             }
         }
 
-        System.out.printf("Melhor fitness encontrado: %.2f\n", melhorFitness);
     }
 }

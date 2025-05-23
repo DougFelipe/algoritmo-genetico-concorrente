@@ -1,0 +1,4 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99,9%)","Unit","Param: tamanhoPopulacao"
+"benchmarks.jmh.BenchmarkGA.executarGenetico","avgt",1,5,"3945,768300","334,475484","ms/op",10
+"benchmarks.jmh.BenchmarkGA.executarGenetico","avgt",1,5,"19080,592240","3414,972153","ms/op",50
+"benchmarks.jmh.BenchmarkGA.executarGenetico","avgt",1,5,"37724,336461","6000,794525","ms/op",100
