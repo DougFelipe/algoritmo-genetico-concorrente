@@ -4,13 +4,14 @@ import serial.utils.Biomarcador;
 import serial.utils.FitnessEvaluator;
 
 import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.List;
 import java.util.Random;
 
 public class GeneticAlgorithm {
     private final List<Biomarcador> dados;
     private final int tamanhoPopulacao;
-    private final List<boolean[]> populacao;
+    private final List<BitSet> populacao;
 
     public GeneticAlgorithm(List<Biomarcador> dados, int tamanhoPopulacao) {
         this.dados = dados;
@@ -18,28 +19,33 @@ public class GeneticAlgorithm {
         this.populacao = gerarPopulacao();
     }
 
-    private List<boolean[]> gerarPopulacao() {
-        List<boolean[]> lista = new ArrayList<>();
+    private List<BitSet> gerarPopulacao() {
+        List<BitSet> lista = new ArrayList<>();
         Random rand = new Random();
+        int tamanhoCromossomo = dados.size();
+
         for (int i = 0; i < tamanhoPopulacao; i++) {
-            boolean[] cromossomo = new boolean[dados.size()];
-            for (int j = 0; j < cromossomo.length; j++) {
-                cromossomo[j] = rand.nextBoolean();
+            BitSet cromossomo = new BitSet(tamanhoCromossomo);
+            for (int j = 0; j < tamanhoCromossomo; j++) {
+                if (rand.nextBoolean()) {
+                    cromossomo.set(j);
+                }
             }
             lista.add(cromossomo);
         }
+
         return lista;
     }
 
     public void executar() {
         double melhorFitness = Double.NEGATIVE_INFINITY;
-        boolean[] melhorIndividuo = null;
+        BitSet melhorIndividuo = null;
 
-        for (boolean[] individuo : populacao) {
+        for (BitSet individuo : populacao) {
             double fit = FitnessEvaluator.avaliar(individuo, dados);
             if (fit > melhorFitness) {
                 melhorFitness = fit;
-                melhorIndividuo = individuo;
+                melhorIndividuo = (BitSet) individuo.clone(); // evitar referência compartilhada
             }
         }
 
