@@ -1,0 +1,2 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1748124499516,2017321,Executar GA via Shell,200,OK,GA Stress ThreadGroup 1-1,text,true,,0,0,1,1,null,0,0,0
