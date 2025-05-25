@@ -1,0 +1,6 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99,9%)","Unit"
+"benchmarks.jmh.BenchmarkGAPlatform.benchmarkAvaliar","avgt",1,5,"282,639209","9,918112","ms/op"
+"benchmarks.jmh.BenchmarkGAPlatform.benchmarkCrossover","avgt",1,5,"134,788037","27,725463","ms/op"
+"benchmarks.jmh.BenchmarkGAPlatform.benchmarkGerarPopulacao","avgt",1,5,"1278,132181","247,400010","ms/op"
+"benchmarks.jmh.BenchmarkGAPlatform.benchmarkMutacao","avgt",1,5,"92,251257","25,621569","ms/op"
+"benchmarks.jmh.BenchmarkGAPlatform.benchmarkSelecaoTorneio","avgt",1,5,"1599,444411","109,059235","ms/op"

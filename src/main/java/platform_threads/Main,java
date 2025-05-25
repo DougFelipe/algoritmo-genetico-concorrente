@@ -1,0 +1,26 @@
+package platform_threads;
+
+import serial.utils.Biomarcador;
+import serial.utils.FitnessEvaluator;
+
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        if (args.length < 1) {
+            System.err.println("Uso: java -cp target/genetic-benchmark-1.0-SNAPSHOT.jar platform_threads.Main <caminho_dataset>");
+            System.exit(1);
+        }
+
+        String caminhoArquivo = args[0];
+        int tamanhoPopulacao = 20;
+        int numGeracoes = 50;
+        double taxaCrossover = 0.9;
+        double taxaMutacao = 0.05;
+
+        List<Biomarcador> dados = FitnessEvaluator.carregar(caminhoArquivo);
+        GAPlatformThreadExecutor ga = new GAPlatformThreadExecutor(dados, tamanhoPopulacao, numGeracoes, taxaCrossover, taxaMutacao);
+        ga.executar();
+        ga.shutdown(); // Encerra executor explicitamente
+    }
+}
