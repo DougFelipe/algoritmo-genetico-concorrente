@@ -1,0 +1,2 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99,9%)","Unit"
+"benchmarks.jmh.BenchmarkGAPlatform.benchmarkAvaliar","avgt",1,5,"319,298636","63,975885","ms/op"

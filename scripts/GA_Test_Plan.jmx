@@ -30,14 +30,14 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Executar GA via Shell" enabled="true">
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Executar GA (Platform Threads)">
           <stringProp name="scriptLanguage">groovy</stringProp>
           <stringProp name="script">
-            def cmd = &quot;java -XX:+Use${gc} -cp target/genetic-benchmark-1.0-SNAPSHOT.jar serial.Main ${dataset}&quot;
+            def cmd = "java -XX:+Use${gc} -Xmx16G -cp target/genetic-benchmark-1.0-SNAPSHOT.jar platform_threads.Main ${dataset}"
             def proc = cmd.execute()
             proc.waitFor()
             def output = proc.text
-            log.info(&quot;GA Output: &quot; + output)
+            log.info("GA Output: " + output)
           </stringProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>

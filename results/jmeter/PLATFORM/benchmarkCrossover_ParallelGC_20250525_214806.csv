@@ -1,0 +1,2 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99,9%)","Unit"
+"benchmarks.jmh.BenchmarkGAPlatform.benchmarkCrossover","avgt",1,5,"136,502291","42,099400","ms/op"

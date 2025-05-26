@@ -39,6 +39,11 @@ public class BenchmarkGAPlatform {
     }
 
     @Benchmark
+    public void executarAlgoritmoCompleto() {
+        ga.executar();
+    }
+
+    @Benchmark
     public List<BitSet> benchmarkGerarPopulacao() {
         return ga.gerarPopulacaoExterno();
     }
